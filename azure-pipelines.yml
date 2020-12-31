@@ -5,9 +5,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  subscription: Visual Studio Enterprise(17b12858-3960-4e6f-a663-a06fdae23428)
+  subscription: Visual Studio Enterprise(4dc27c3b-60eb-4010-84f2-51d79521a6af)
   resourceGroup: resourcegroup-tfstate
-  storageAccount: terraformtfstateskip
+  storageAccount: terraformtfstateskip7
   container: tfstate
   tfstateFile: terraform.tfstate
   anyTfChanges: false
@@ -15,9 +15,9 @@ variables:
 steps:
 
 - task: TerraformInstaller@0
-  displayName: install Terraform v0.12.28
+  displayName: install Terraform v0.14.3
   inputs:
-    terraformVersion: '0.12.28'
+    terraformVersion: '0.14.3'
 
 - task: TerraformTaskV1@0
   displayName: terraform init
